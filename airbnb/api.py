@@ -55,7 +55,7 @@ class Api(object):
                              "prevent_account_creation": "true"}
 
             r = self._session.post(
-                API_URL + "/v1/authorize", data=json.dumps(login_payload)
+                API_URL + "/v2/logins", data=json.dumps(login_payload)
             )
 
             if "access_token" not in r.json():
